@@ -22,7 +22,3 @@ class Matrix:
                     self.pairingMatrix[X].append(1)
                 else:
                     self.pairingMatrix[X].append(0)
-        for i in range(0, len(self.fileContent)):
-            for j in range(0, len(self.fileContent)):
-                print(self.pairingMatrix[i][j], end="")
-            print("")
