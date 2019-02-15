@@ -8,6 +8,7 @@ class Matrix:
     def loadFile(self, file=None):
         self.loadedFile = file
         for line in self.loadedFile:
+            line.lower()
             splitted = line.split()
             for word in splitted:
                 self.fileContent.append(word)
