@@ -1,25 +1,15 @@
 class Matrix:
 
     def __init__(self):
-        self.loadedFile = None
-        self.fileContent = []
         self.pairingMatrix = []
 
-    def loadFile(self, file=None):
-        self.loadedFile = file
-        for line in self.loadedFile:
-            line.lower()
-            splitted = line.split()
-            for word in splitted:
-                self.fileContent.append(word)
-
     # (X,Y) in matrix
-    def createMatrix(self):
-        for X in range(0, len(self.fileContent)):
+    def createMatrix(self, wordList):
+        for X in range(0, len(wordList)):
             nlist = []
             self.pairingMatrix.append(nlist)
-            for Y in range(0, len(self.fileContent)):
-                if self.fileContent[X] == self.fileContent[Y]:
+            for Y in range(0, len(wordList)):
+                if wordList[X] == wordList[Y]:
                     self.pairingMatrix[X].append(1)
                 else:
                     self.pairingMatrix[X].append(0)
